@@ -569,7 +569,7 @@ textarea.placeholder-2 {
   text-align: center;
   display: none;
   z-index: 1000;
-  max-width: 50%;
+  max-width: 40%;
   height: 70%;
 }
 

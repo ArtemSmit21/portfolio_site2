@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Project Portfolio-site</title>
+</head>
+
+<body>
+
+  <div id="popup" class="popup">
+    <button class="popup__close">&times;</button>
+    <p class="popup__message">Добро пожаловать на сайт!</p>
+  </div>
+
+  <div class="personal-portfolio">
+
+    <!-- 1. First Part: Greeting -->
+    <section class="first-part-greeting">
+
+      <div class="rectangle"></div>
+
+      <nav class="top-menu" role="navigation" aria-label="Main menu">
+        <div class="div-text-greeting-upper-part">
+          <a href="#home" class="text-in-greeting-upper-part">Home</a>
+        </div>
+        <div class="div-text-greeting-upper-part">
+          <a href="#recent-work" class="text-in-greeting-upper-part">Recent work</a>
+        </div>
+        <div class="div-text-greeting-upper-part">
+          <a href="#get-in-touch" class="text-in-greeting-upper-part">Get In Touch</a>
+        </div>
+      </nav>
+
+      <div class="text-first-part">
+        <h1 class="text-wrapper-first-part-1">Artem Smirnov</h1>
+        <p class="intro-text-first-part">
+          Hi, I am a student of MIPT, a Java developer, and this site is about me.
+        </p>
+        <a href="#" class="call-to-action-button-1">
+          <span class="text-wrapper-first-part-2">Let’s get started</span>
+        </a>
+
+        <div class="worked-with" style="margin-top: 40px;">
+          <div class="text-wrapper-first-part-2">Worked with</div>
+          <div class="worked-with-logos" style="margin-top: 20px;">
+            <div class="logo">
+              <img class="clickup-logo" src="images/logo1.svg" alt="Лого спринга" />
+            </div>
+            <div class="logo">
+              <img class="clickup-logo" src="images/postgresql-icon.svg" alt="Лого постгреса" />
+            </div>
+            <div class="logo">
+              <img class="clickup-logo" src="images/icons8-github.svg" alt="Лого гита" />
+            </div>
+            <div class="logo">
+              <img class="clickup-logo" src="images/icons8-apache-kafka.svg" alt="Лого кафки" />
+            </div>
+            <div class="logo">
+              <img class="clickup-logo" src="images/icons8-figma.svg" alt="Лого фигмы" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img class="my-photo" src="images/my-photo.jpg" alt="Мое фото" />
+
+    </section>
+
+    <section class="countdown-timer" aria-label="Countdown to graduation">
+      <h2>До получения диплома МФТИ осталось:</h2>
+      <div id="timer" aria-live="polite" style="font-size:1.5rem; font-weight:700; color:#007acc; text-align:center;">
+        <span id="days">00</span> дней
+        <span id="hours">00</span> часов
+        <span id="minutes">00</span> минут
+        <span id="seconds">00</span> секунд
+      </div>
+    </section>
+
+    <!-- 2. Second Part: Recent Work -->
+    <section class="second-part-recent-work" id="recent-work">
+
+      <h2 class="text-wrapper-recent-work">Recent Work</h2>
+
+      <p class="intro-text-first-part" style="text-align: center; margin-bottom: 40px;">
+        Solving user &amp; business problems since last 1 year.
+      </p>
+
+      <div class="recent-works-grid">
+
+        <article class="recent-work">
+          <img class="work-photo" src="images/mts_eco_logo.png" alt="Лого МТС" />
+          <h3 class="work-name-here">Аналог Jira</h3>
+          <p class="work-text">
+            Разработка сервиса таск менеджмента.
+          </p>
+          <a href="#" class="call-to-action-button-2">Know more</a>
+        </article>
+
+        <article class="recent-work">
+          <img class="work-photo" src="images/mts_eco_logo.png" alt="Лого МТС" />
+          <h3 class="work-name-here">
+            Сервис планирования <br> совместных путешествий
+          </h3>
+          <p class="work-text">
+            Разработка сервиса по планированию совместных путешествий совместно с MTS Travel.
+          </p>
+          <a href="#" class="call-to-action-button-2">Know more</a>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- 3. Third Part: Get In Touch -->
+    <section class="get-in-touch" id="get-in-touch">
+
+      <h2 class="heading-get-in-touch">Get In Touch</h2>
+
+      <p class="subtext-get-in-touch">
+        Если у вас есть вопросы или вы хотите обсудить потенциальное сотрудничество, не стесняйтесь написать мне!
+      </p>
+
+      <button class="open-popup-btn">Связаться с нами</button>
+
+      <div class="popup-overlay" id="contactPopup">
+        <div class="popup-content">
+          <button class="close-popup-btn" aria-label="Закрыть форму">&times;</button>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="input-group email">
+              <label for="email" class="contact-info">Email</label>
+              <div class="placeholder-wrapper">
+                <input type="email" id="email" class="placeholder" placeholder="Enter email..." required />
+              </div>
+              <div class="error" id="emailError" style="display: none;">
+                <div class="notification">Пожалуйста, введите корректный адрес электронной почты.</div>
+              </div>
+            </div>
+
+            <div class="input-group mobile">
+              <label for="mobile" class="contact-info">Mobile</label>
+              <div class="placeholder-wrapper">
+                <input type="text" id="mobile" class="placeholder" placeholder="Enter mobile..." required />
+              </div>
+              <div class="error" id="mobileError" style="display: none;">
+                <div class="notification">Введите корректный номер телефона.</div>
+              </div>
+            </div>
+
+            <div class="input-group message">
+              <label for="message" class="contact-info">Message</label>
+              <div class="placeholder-wrapper-2">
+                <textarea id="message" class="placeholder-2" placeholder="Enter your message..." required></textarea>
+              </div>
+              <div class="error" id="messageError" style="display: none;">
+                <div class="notification">Сообщение должно содержать как минимум 10 символов.</div>
+              </div>
+            </div>
+
+            <button type="submit" action="https://httpstat.us/200" method="POST" class="contact-button">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 4. Gallery -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid">
+          <img src="images/gallery1.jpg" alt="Gallery image 1" />
+          <img src="images/gallery2.jpg" alt="Gallery image 2" />
+          <img src="images/gallery3.jpg" alt="Gallery image 3" />
+        </div>
+      </div>
+
+      <div class="popup hidden" id="galleryPopup">
+        <span class="close-btn" id="popupClose">&times;</span>
+        <img class="popup-img" id="popupImg" src="" alt="Expanded Image" />
+        <button class="nav-btn left-btn" id="prevBtn">&#10094;</button>
+        <button class="nav-btn right-btn" id="nextBtn">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer class="made-with-love">
+      <div class="made-with-love-text">Made with ❤️</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const mobile = document.getElementById('mobile').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const submitButton = document.querySelector('.contact-button');
+
+      let valid = true;
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const mobilePattern = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s./0-9]*$/;
+
+      if (!emailPattern.test(email)) {
+        document.getElementById('emailError').style.display = 'block';
+        valid = false;
+      } else {
+        document.getElementById('emailError').style.display = 'none';
+      }
+
+      if (!mobilePattern.test(mobile)) {
+        document.getElementById('mobileError').style.display = 'block';
+        valid = false;
+      } else {
+        document.getElementById('mobileError').style.display = 'none';
+      }
+
+      if (message.length < 10) {
+        document.getElementById('messageError').style.display = 'block';
+        valid = false;
+      } else {
+        document.getElementById('messageError').style.display = 'none';
+      }
+
+      if (valid) {
+        submitButton.textContent = 'Отправляем...';
+        submitButton.disabled = true;
+
+        setTimeout(() => {
+          submitButton.textContent = 'Успешно отправлено ✅';
+          submitButton.style.backgroundColor = '#4CAF50';
+
+          setTimeout(() => {
+            submitButton.textContent = 'Submit';
+            submitButton.disabled = false;
+            submitButton.style.backgroundColor = '';
+          }, 5000);
+
+          event.target.reset();
+        }, 2000);
+      }
+    });
+  </script>
+
+  <script>
+    const targetDate = new Date('2028-06-30T15:00:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('timer').innerHTML = "Поздравляем! Диплом получен 🎓";
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+  <script>
+    const CLOSE_TIME_KEY = 'popupClosedTime';
+
+    function showPopup() {
+      const popup = document.getElementById('popup');
+      if (popup) {
+        popup.style.display = 'block';
+      }
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('popup');
+      if (popup) {
+        popup.style.display = 'none';
+        localStorage.setItem(CLOSE_TIME_KEY, Date.now().toString());
+      }
+    }
+
+    function checkAndSchedulePopup() {
+      const closedTime = localStorage.getItem(CLOSE_TIME_KEY);
+      const now = Date.now();
+
+      if (closedTime && now - parseInt(closedTime, 10) < 24 * 60 * 60 * 1000) {
+        return;
+      }
+
+      setTimeout(showPopup, 30000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const closeBtn = document.querySelector('#popup .popup__close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closePopup);
+      }
+
+      checkAndSchedulePopup();
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menu = document.querySelector('.top-menu');
+      const firstSection = document.querySelector('.first-part-greeting');
+
+      const firstSectionHeight = firstSection.offsetHeight;
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > firstSectionHeight) {
+          menu.classList.add('fixed');
+        } else {
+          menu.classList.remove('fixed');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    const openBtn = document.querySelector('.open-popup-btn');
+    const popup = document.getElementById('contactPopup');
+    const closeBtn = document.querySelector('.close-popup-btn');
+
+    openBtn.addEventListener('click', () => {
+      popup.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.classList.remove('active');
+    });
+
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.classList.remove('active');
+      }
+    });
+  </script>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-grid img');
+    const popup1 = document.getElementById('galleryPopup');
+    const popupImg = document.getElementById('popupImg');
+    const closeBtn1 = document.getElementById('popupClose');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    function openPopup(index) {
+      currentIndex = index;
+      popupImg.src = galleryImages[currentIndex].src;
+      popup1.classList.remove('hidden');
+      updateNavButtons();
+    }
+
+    function closePopup() {
+      popup1.classList.add('hidden');
+    }
+
+    function updateNavButtons() {
+      prevBtn.classList.toggle('hidden', currentIndex === 0);
+      nextBtn.classList.toggle('hidden', currentIndex === galleryImages.length - 1);
+    }
+
+    function showPrev() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        popupImg.src = galleryImages[currentIndex].src;
+        updateNavButtons();
+      }
+    }
+
+    function showNext() {
+      if (currentIndex < galleryImages.length - 1) {
+        currentIndex++;
+        popupImg.src = galleryImages[currentIndex].src;
+        updateNavButtons();
+      }
+    }
+
+    galleryImages.forEach((img, index) => {
+      img.addEventListener('click', () => openPopup(index));
+    });
+
+    closeBtn1.addEventListener('click', closePopup);
+
+    prevBtn.addEventListener('click', showPrev);
+
+    nextBtn.addEventListener('click', showNext);
+
+    popup1.addEventListener('click', (e) => {
+      if (e.target === popup1) {
+        closePopup();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!popup1.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          closePopup();
+        } else if (e.key === 'ArrowLeft') {
+          showPrev();
+        } else if (e.key === 'ArrowRight') {
+          showNext();
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

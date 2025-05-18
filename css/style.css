@@ -570,7 +570,7 @@ textarea.placeholder-2 {
   display: none;
   z-index: 1000;
   max-width: 40%;
-  height: 70%;
+  height: 70px;
 }
 
 /* Стили сообщения */

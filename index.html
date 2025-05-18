@@ -369,7 +369,7 @@
       updateNavButtons();
     }
 
-    function closePopup() {
+    function closeGalleryPopup() {
       popup1.classList.add('hidden');
     }
 
@@ -398,7 +398,7 @@
       img.addEventListener('click', () => openPopup(index));
     });
 
-    closeBtn1.addEventListener('click', closePopup);
+    closeBtn1.addEventListener('click', closeGalleryPopup);
 
     prevBtn.addEventListener('click', showPrev);
 
@@ -406,14 +406,14 @@
 
     popup1.addEventListener('click', (e) => {
       if (e.target === popup1) {
-        closePopup();
+        closeGalleryPopup();
       }
     });
 
     document.addEventListener('keydown', (e) => {
       if (!popup1.classList.contains('hidden')) {
         if (e.key === 'Escape') {
-          closePopup();
+          closeGalleryPopup();
         } else if (e.key === 'ArrowLeft') {
           showPrev();
         } else if (e.key === 'ArrowRight') {

@@ -569,7 +569,8 @@ textarea.placeholder-2 {
   text-align: center;
   display: none;
   z-index: 1000;
-  max-width: 90%;
+  max-width: 50%;
+  height: 70%;
 }
 
 /* Стили сообщения */
